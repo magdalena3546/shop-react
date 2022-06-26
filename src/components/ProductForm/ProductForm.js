@@ -9,7 +9,7 @@ const ProductForm = props => {
         e.preventDefault();
         const summary = {
           Name: props.title,
-          Price: props.getPrice(),
+          Price: props.getPrice,
           Size: props.currentSize,
           Color: props.currentColor,
         }
@@ -31,7 +31,6 @@ ProductForm.propTypes = {
     title: PropTypes.string.isRequired,
     colors: PropTypes.array.isRequired,
     sizes: PropTypes.array.isRequired,
-    getPrice: PropTypes.func.isRequired,
     currentColor: PropTypes.string.isRequired,
     setCurrentColor: PropTypes.func.isRequired,
     currentSize: PropTypes.string.isRequired,
